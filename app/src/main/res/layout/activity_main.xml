@@ -1,0 +1,25 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+ android:layout_width="match_parent" android:layout_height="match_parent">
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  android:orientation="vertical" android:padding="20dp">
+  <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+   android:text="My WireGuard VPN" android:textSize="28sp" android:textStyle="bold"/>
+  <TextView android:id="@+id/statusText" android:layout_width="wrap_content"
+   android:layout_height="wrap_content" android:layout_marginTop="12dp"
+   android:text="Status: Disconnected" android:textSize="18sp"/>
+  <TextView android:id="@+id/timeText" android:layout_width="wrap_content"
+   android:layout_height="wrap_content" android:text="Connection time: 00:00:00"
+   android:textSize="15sp"/>
+  <Button android:id="@+id/connectButton" android:layout_width="match_parent"
+   android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="CONNECT"/>
+  <Button android:id="@+id/saveButton" android:layout_width="match_parent"
+   android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="SAVE CONFIG"/>
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+   android:layout_marginTop="16dp"
+   android:text="Paste the Android client configuration from your VPS below."
+   android:textSize="14sp"/>
+  <EditText android:id="@+id/configEdit" android:layout_width="match_parent"
+   android:layout_height="380dp" android:layout_marginTop="8dp" android:gravity="top|start"
+   android:inputType="textMultiLine" android:fontFamily="monospace"/>
+ </LinearLayout>
+</ScrollView>
