@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
@@ -17,12 +18,11 @@ jobs:
           java-version: "17"
 
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
 
       - name: Install Android SDK packages
-        shell: bash
         run: |
-          echo "y" | sdkmanager --licenses
+          yes | sdkmanager --licenses
           sdkmanager \
             "platform-tools" \
             "platforms;android-36" \
