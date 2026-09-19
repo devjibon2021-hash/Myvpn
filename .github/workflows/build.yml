@@ -22,7 +22,7 @@ jobs:
       - name: Install Android SDK packages
         shell: bash
         run: |
-          yes | sdkmanager --licenses >/dev/null || true
+          echo "y" | sdkmanager --licenses
           sdkmanager \
             "platform-tools" \
             "platforms;android-36" \
